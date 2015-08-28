@@ -342,7 +342,7 @@ void JoystickInput::setActiveUAS(UASInterface* uas)
 
         // Update the joystick settings for a new UAS.
         autopilotType = uas->getAutopilotType();
-        systemType = 2;//uas->getSystemType();
+        systemType = uas->getSystemType();
     }
 
     // Make sure any UI elements know we've updated the UAS. The UASManager signal is re-emitted here so that UI elements know to
